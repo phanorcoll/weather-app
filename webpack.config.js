@@ -25,6 +25,12 @@ var config = {
                 use: [
                     'file-loader?name=[name].[ext]&outputPath=images/',
                     {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 25000,
+                        }
+                    },
+                    {
                         loader: 'image-webpack-loader',
                         options: {
                             gifsicle: {
