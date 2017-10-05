@@ -1,12 +1,19 @@
+$bg-color: #333;
+$h1-color:#ccc;
+
 html {
     width: 100%;
     height: 100%;
 }
 
 body {
-    background: #ccc;
+    background: $bg-color;
     height: 100%;
     width: 100%;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
 }
+
+h1 {
+     color: $h1-color;
+ }
