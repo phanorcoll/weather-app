@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
 import Forecast from './Forecast.jsx';
+import Days from './Days.jsx';
+import {
+    ReactRouter,
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    Nav,
+} from 'react-router-dom';
 
 import owl from '../images/weather-owl.png';
 
