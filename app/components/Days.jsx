@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import cloud from '../images/cloud-icon.png';
+import PropTypes from 'prop-types';
 
 export class Forecast extends Component {
     constructor() {
@@ -33,11 +34,19 @@ export class Forecast extends Component {
         return (
             <div className='content'>
                 <div className='cloud'>
-                    <div className='forecast-title'>forecast for <span>New york, New York!</span></div><img src={cloud} />
+                    <div className='forecast-title'>forecast for <span>{this.props.city}!</span></div><img src={cloud} />
                 </div>
             </div>
         )
     }
+}
+
+Forecast.propTypes = {
+    city: PropTypes.string.isRequired
+}
+
+Forecast.defaultProps = {
+    city: 'Merida'
 }
 
 export default Forecast

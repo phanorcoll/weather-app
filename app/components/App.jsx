@@ -23,7 +23,15 @@ class App extends Component {
                         <img src={owl} alt='weather owl reactjs app' />
                     </div>
                     <div className='content-wrapper'>
-                        <Forecast />
+                        <Router>
+                            <Switch>
+                                <Route exact path='/' component={Forecast} />
+                                <Route exact path='/days' component={Days} />
+                                <Route render={function(){
+                                    return <p>Not Found</p>
+                                }} />
+                            </Switch>
+                        </Router>
                     </div>
                 </div>
             </div>

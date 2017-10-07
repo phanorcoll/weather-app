@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Link from 'react-router-dom';
 
 export class Forecast extends Component {
-    constructor(){
+    constructor() {
         super()
 
-        this.state= {
+        this.state = {
             city: ''
         }
 
@@ -13,17 +14,17 @@ export class Forecast extends Component {
     }
 
 
-    handleChange(event){
+    handleChange(event) {
         var value = event.target.value;
 
-        this.setState(function(){
+        this.setState(function () {
             return {
                 city: value
             }
         });
     }
 
-    handleSubmit(event){
+    handleSubmit(event) {
         event.preventDefault();
         console.log(this.state.city);
     }
@@ -36,9 +37,9 @@ export class Forecast extends Component {
                 </div>
                 <div className='search'>
                     <form onSubmit={this.handleSubmit}>
-                    <input type='text' id='city' placeholder='St. George, Utah' onChange={this.handleChange} />
-                    <button className='btn btn--primary btn--inside' stype='submit' disabled={!this.state.city}>
-                        search forecast
+                        <input type='text' id='city' placeholder='St. George, Utah' onChange={this.handleChange} />
+                        <button className='btn btn--primary btn--inside' stype='submit' disabled={!this.state.city}>
+                            search forecast
                     </button>
                     </form>
                 </div>
