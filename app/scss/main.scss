@@ -90,19 +90,45 @@ body {
                         margin-left: -96px;
                     }
                 }
-
-                .cloud{
+                .cloud {
                     display: flex;
                     width: 376px;
                     float: right;
-                    .forecast-title{
+                    .forecast-title {
                         padding-top: 30px;
                         color: #605050;
                         margin-left: auto;
                     }
-                    span{
+                    span {
                         font-weight: bold;
                         text-transform: capitalize
+                    }
+                }
+                .loader {
+                    margin: 0 auto;
+                    border: 8px solid #f3f3f3;
+                    border-radius: 50%;
+                    border-top: 8px solid #e4d672;
+                    border-bottom: 8px solid #212121;
+                    width: 60px;
+                    height: 60px;
+                    -webkit-animation: spin 1.5s linear infinite;
+                    animation: spin 1.5s linear infinite;
+                }
+                @-webkit-keyframes spin {
+                    0% {
+                        -webkit-transform: rotate(0deg);
+                    }
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                    }
+                }
+                @keyframes spin {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
                     }
                 }
             }
