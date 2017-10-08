@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import cloud from '../images/cloud-icon.png';
 import PropTypes from 'prop-types';
+import queryString from 'query-string';
+
 
 export class Forecast extends Component {
     constructor() {
@@ -12,6 +14,16 @@ export class Forecast extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount(){
+        var cityName = queryString.parse(this.props.location.search);
+
+        this.setState(function () {
+            return {
+                city: cityName.city
+            }
+        });
     }
 
 
@@ -34,19 +46,11 @@ export class Forecast extends Component {
         return (
             <div className='content'>
                 <div className='cloud'>
-                    <div className='forecast-title'>forecast for <span>{this.props.city}!</span></div><img src={cloud} />
+                    <div className='forecast-title'>forecast for <span>{this.state.city}!</span></div><img src={cloud} />
                 </div>
             </div>
         )
     }
-}
-
-Forecast.propTypes = {
-    city: PropTypes.string.isRequired
-}
-
-Forecast.defaultProps = {
-    city: 'Merida'
 }
 
 export default Forecast
