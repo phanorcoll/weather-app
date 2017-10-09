@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let _baseURL = 'http://api.openweathermap.org/data/2.5/';
+let _baseURL = 'https://api.openweathermap.org/data/2.5/';
 let _APIKEY = 'b714ec74bbab5650795063cb0fdf5fbe';
 
 
