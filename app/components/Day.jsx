@@ -11,7 +11,7 @@ class Day extends Component {
         let date = getDate(this.props.day.dt);
         return (
             <div onClick={this.props.onClick} className={this.props.cStyle}>
-                <img src={require('../images/icons/'+this.props.day.weather[0].icon+'.svg')} alt="weather owl" />
+                <img className='imgsize' src={require('../images/icons/'+this.props.day.weather[0].icon+'.svg')} alt="weather owl" />
                 <div>
                     {date}
                 </div>

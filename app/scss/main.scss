@@ -164,7 +164,10 @@ body {
                 display: flex;
                 .detail {
                     width: 250px;
-                    margin: 50px;
+                    margin: 100px 50px;
+                    .imgsize {
+                        width: 160px;
+                    }
                 }
                 .info {
                     padding-top: 50px;
