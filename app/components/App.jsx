@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Forecast from './Forecast.jsx';
 import Days from './Days.jsx';
+import Detail from './Detail.jsx';
+
 import {
     ReactRouter,
     BrowserRouter as Router,
@@ -27,7 +29,8 @@ class App extends Component {
                             <Switch>
                                 <Route exact path='/' component={Forecast} />
                                 <Route exact path='/days' component={Days} />
-                                <Route render={function(){
+                                <Route path='/details/:city' component={Detail} />
+                                <Route render={function () {
                                     return <p>Not Found</p>
                                 }} />
                             </Switch>

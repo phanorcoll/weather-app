@@ -104,6 +104,17 @@ body {
                         text-transform: capitalize
                     }
                 }
+                .day-container {
+                    position: absolute;
+                    margin-top: 100px;
+                    display: flex;
+                    .data{
+                        border: 1px solid #ccc;
+                        width: 100px;
+                        margin: 6px;
+                        padding: 10px;
+                    }
+                }
                 .loader {
                     margin: 0 auto;
                     border: 8px solid #f3f3f3;
@@ -130,6 +141,18 @@ body {
                     100% {
                         transform: rotate(360deg);
                     }
+                }
+            }
+            .detail-container {
+                font-family: $font-family-content;
+                font-size: 21px;
+                display: flex;
+                .detail{
+                    width: 250px;
+                    margin: 50px;
+                }
+                .info{
+                    padding-top: 50px;
                 }
             }
         }
