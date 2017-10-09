@@ -9,7 +9,6 @@ class Detail extends Component {
     }
     render() {
         let props=this.props.location.state;
-        console.log(props)
         return (
             <div className='detail-container'>
                 <Day day={props} cStyle='detail' />

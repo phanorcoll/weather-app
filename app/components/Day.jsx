@@ -26,7 +26,7 @@ Day.propTypes = {
 }
 
 Day.defaultProps = {
-    cStyle: 'data'
+    cStyle: 'data grow'
 }
 
 export default Day
