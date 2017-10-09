@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import cloud from '../images/icons/cloudy.svg';
 import PropTypes from 'prop-types';
 import { getDate } from '../utils/helpers.jsx'
 
@@ -12,7 +11,7 @@ class Day extends Component {
         let date = getDate(this.props.day.dt);
         return (
             <div onClick={this.props.onClick} className={this.props.cStyle}>
-                <img src={cloud} alt="weather owl" />
+                <img src={require('../images/icons/'+this.props.day.weather[0].icon+'.svg')} alt="weather owl" />
                 <div>
                     {date}
                 </div>
