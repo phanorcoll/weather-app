@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { getDate } from '../utils/helpers.jsx'
+import { getDate, convertTemp} from '../utils/helpers.jsx'
 import Day from './Day.jsx';
 
 class Detail extends Component {
@@ -15,9 +15,9 @@ class Detail extends Component {
                 <div className='info'>
                     <ul>
                         <li><a href='#'>City</a>{props.city}</li>
-                        <li><a href='#'>Humidity</a>{props.humidity}</li>
-                        <li><a href='#'>Max temp</a>{props.temp.max}</li>
-                        <li><a href='#'>Min temp</a>{props.temp.min}</li>
+                        <li><a href='#'>Humidity</a>{(props.humidity)}</li>
+                        <li><a href='#'>Max temp</a>{convertTemp(props.temp.max)} degrees</li>
+                        <li><a href='#'>Min temp</a>{convertTemp(props.temp.min)} degrees</li>
                         <li><a href='#'>Description</a>{props.weather[0].description}</li>
                     </ul>
                 </div>
