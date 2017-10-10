@@ -106,7 +106,7 @@ body {
                 }
                 .day-container {
                     position: absolute;
-                    margin-top: 100px;
+                    margin-top: 150px;
                     display: flex;
                     .data {
                         border: 1px solid #ccc;
@@ -199,6 +199,14 @@ body {
                         font-size: 30px;
                         background: #00CBFC;
                     }
+                }
+            }
+            .navigation {
+                margin-top: 15px;
+                font-family: $font-family-content;
+                a {
+                    text-decoration: none;
+                    color: $main-color;
                 }
             }
         }

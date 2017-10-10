@@ -28,7 +28,7 @@ class App extends Component {
                         <Router>
                             <Switch>
                                 <Route exact path='/' component={Forecast} />
-                                <Route exact path='/days' component={Days} />
+                                <Route path='/days' component={Days} />
                                 <Route path='/details/:city' component={Detail} />
                                 <Route render={function () {
                                     return <p>Not Found</p>

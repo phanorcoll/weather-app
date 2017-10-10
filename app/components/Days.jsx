@@ -5,6 +5,7 @@ import queryString from 'query-string';
 import Loading from './Loading.jsx';
 import { getCurrentWeather, getForecast } from '../utils/api.jsx';
 import Day from './Day.jsx';
+import {Link} from 'react-router-dom';
 
 class Forecast extends Component {
     constructor(props) {
@@ -60,6 +61,11 @@ class Forecast extends Component {
                         }, this)}
                     </div>
                 </div>}
+                <div className='navigation'>
+                    <Link to="/">
+                        Search Again
+                    </Link>
+                </div>
             </div>
         )
     }
