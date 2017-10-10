@@ -14,11 +14,11 @@ class Detail extends Component {
                 <Day day={props} cStyle='detail' />
                 <div className='info'>
                     <ul>
-                        <li><a href='#'>City</a>{props.city}</li>
-                        <li><a href='#'>Humidity</a>{(props.humidity)}</li>
-                        <li><a href='#'>Max temp</a>{convertTemp(props.temp.max)} degrees</li>
-                        <li><a href='#'>Min temp</a>{convertTemp(props.temp.min)} degrees</li>
-                        <li><a href='#'>Description</a>{props.weather[0].description}</li>
+                        <li><span>City</span>{props.city}</li>
+                        <li><span>Humidity</span>{(props.humidity)}</li>
+                        <li><span>Max temp</span>{convertTemp(props.temp.max)} degrees</li>
+                        <li><span>Min temp</span>{convertTemp(props.temp.min)} degrees</li>
+                        <li><span>Description</span>{props.weather[0].description}</li>
                     </ul>
                 </div>
             </div>

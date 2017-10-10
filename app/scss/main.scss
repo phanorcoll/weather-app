@@ -184,7 +184,7 @@ body {
                     li:last-child {
                         border: none;
                     }
-                    li a {
+                    li span {
                         text-decoration: none;
                         color: #000;
                         -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
@@ -195,7 +195,7 @@ body {
                         display: block;
                         width: 200px;
                     }
-                    li a:hover {
+                    li span:hover {
                         font-size: 30px;
                         background: #00CBFC;
                     }
